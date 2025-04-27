@@ -1,0 +1,157 @@
+/* Main Page Layout */
+.home-page {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+  }
+  
+  /* Hero Section with Background Image */
+  .hero-section {
+    height: 33vh; /* Top third of the viewport */
+    background-image: url('../../../public/backroubdHome.jpg'); /* You'll need to add this image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  /* Logo Positioning */
+.logo-container {
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 4px solid white;
+    overflow: hidden; /* This ensures the image stays within the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Updated logo styling to fill the circle */
+  .logo {
+    width: 100%; /* Fill the container width */
+    height: 100%; /* Fill the container height */
+    object-fit: cover; /* This ensures the image covers the area without distortion */
+    border-radius: 50%; /* Keep it circular */
+  }
+  
+  
+  /* Welcome Section */
+  .welcome-section {
+    padding: 80px 0px 40px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .welcome-title {
+    font-size: 3rem;
+    color: #2E8B57; /* Forest green color */
+    margin-bottom: 16px;
+    font-family: 'Georgia', serif;
+  }
+  
+  .welcome-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* Container for sections */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Featured Services Section */
+  .featured-services-section {
+    background-color: white;
+  }
+  
+  .section-title {
+    text-align: center;
+    color: #2E8B57;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-family: 'Georgia', serif;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #4CAF50;
+  }
+  
+  /* Services Grid Layout */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Service Card Styling */
+  .service-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    border: 2px solid #4CAF50;
+  }
+  
+  /* Icon Container */
+  .service-icon {
+    margin-bottom: 20px;
+  }
+  
+  .service-icon svg {
+    width: 60px;
+    height: 60px;
+    color: #4CAF50;
+  }
+  
+  /* Service Title */
+  .service-title {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Service Description */
+  .service-description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+  }
