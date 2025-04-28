@@ -1,6 +1,8 @@
 import React from 'react'
 import { Snowflake, Scissors, Footprints, LeafIcon, Fence, Trees, SquareStack, DoorClosed, Droplet, TreeDeciduous, Clover, Hammer, RatioIcon, Ratio, FlameKindling } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './allServices.css'
+
 const services = [
     { name: 'Snow Removal', icon: Snowflake , image: '../../../photos/snow.jpg'},
     { name: 'Lawn and Garden Maintenance', icon: Scissors , image: '../../../photos/lawnandgarden.jpg'},
@@ -41,6 +43,14 @@ function AllServices() {
                 </div>
               </div>
             ))}
+            {/* Gallery Button */}
+            <Link to="/gallery" className="service-card gallery-card" style={{ backgroundImage: `url('../../../photos/logo.jpg')` }}>
+              <div className="service-overlay">
+                <div className="service-content">
+                  <div className="service-name-overlay">View Our Work</div>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
