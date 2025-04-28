@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './contact.css';
 
 const Contact = () => {
@@ -30,15 +31,15 @@ const Contact = () => {
       setShowSuccess(false);
       return;
     }
-    
-    // In a real implementation, you would send this data to your server
-    console.log(formData);
-    
-    // Show success message
+    const req= {name: formData.name, email: formData.email, phone: formData.phone, service: formData.service, message: formData.message};
+    // שליחת הנתונים לשרת
+  axios.post('http://localhost:3000/api/contact/send', req)
+  .then(() => {
+    // הצגת הודעת הצלחה
     setShowSuccess(true);
     setShowError(false);
-    
-    // Reset the form
+
+    // איפוס טופס
     setFormData({
       name: '',
       email: '',
@@ -46,7 +47,14 @@ const Contact = () => {
       service: '',
       message: ''
     });
-  };
+  })
+  .catch(() => {
+    // הצגת הודעת שגיאה
+    setShowError(true);
+    setShowSuccess(false);
+  });
+};
+    
   
   return (
     <div className="contact-container">

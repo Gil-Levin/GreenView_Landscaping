@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FolderOpen } from 'lucide-react';
-import fs from 'fs';
-import path from 'path';
+/*import fs from 'fs';
+import path from 'path';*/
+import axios from 'axios';
 import './gallery.css';
 
 export default function Gallery() {
@@ -9,7 +10,7 @@ export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  /*useEffect(() => {
     // In a real application, you would likely use an API endpoint to fetch images
     const loadImages = async () => {
       try {
@@ -33,6 +34,20 @@ export default function Gallery() {
     };
 
     loadImages();
+  }, []);*/
+  useEffect(() => {
+    // שליחה לבקשה ל-API לקבלת כל התמונות
+    axios.get('http://localhost:3000/api/images')
+    .then(response => {
+      // response.data מכיל את הנתונים
+      setImages(response.data);
+    })
+    .catch(error => {
+      console.error('שגיאה בהבאת התמונות:', error);
+    })
+    .finally(() => {
+      setLoading(false);
+    });
   }, []);
 
   const openLightbox = (image) => {
@@ -63,20 +78,20 @@ export default function Gallery() {
           </div>
         ) : (
           <div className="gallery-grid">
-            {images.map((image) => (
+            {images.map((image,index) => (
               <div 
-                key={image.id} 
+                key={index} 
                 className="gallery-item"
                 onClick={() => openLightbox(image)}
               >
                 <div className="image-container">
                   <img
-                    src={image.src}
-                    alt={image.alt}
+                    src={image}
+                    alt={`image ${index}`}
                     className="gallery-image"
                   />
                   <div className="image-overlay">
-                    <p className="image-caption">{image.alt}</p>
+                  
                   </div>
                 </div>
               </div>
@@ -96,12 +111,12 @@ export default function Gallery() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={selectedImage.src}
-              alt={selectedImage.alt}
+              src={selectedImage}
+              alt={'image'}
               className="lightbox-image"
             />
             <div className="lightbox-caption">
-              <h3>{selectedImage.alt}</h3>
+              <h3></h3>
             </div>
           </div>
           <button 
