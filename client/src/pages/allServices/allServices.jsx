@@ -10,7 +10,7 @@ const services = [
     { name: 'Decks', icon: Hammer , image: '../../../photos/deck.jpg'},
     { name: 'Fences', icon: Fence , image: '../../../photos/fence.jpg'},
     { name: 'Gates', icon: DoorClosed , image: '../../../photos/gate.jpg'},
-    { name: 'Landscaping Design & Construction', icon: TreeDeciduous , image: '../../../photos/deck.jpg'},
+    { name: 'Landscaping Design & Construction', icon: TreeDeciduous , image: '../../../photos/desiegn.jpg'},
     { name: 'Irrigation systems', icon: Droplet , image: '../../../photos/irrigration.jpg'},
     { name: 'Trees & Plants', icon: Trees , image: '../../../photos/trees&plants.jpg'},
     { name: 'Walkways', icon: Footprints , image: '../../../photos/walkways.jpg'},

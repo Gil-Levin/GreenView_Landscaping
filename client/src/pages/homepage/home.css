@@ -25,7 +25,7 @@
     border-radius: 50%;
     background-color: white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border: 4px solid white;
+    /*border: 4px solid white;*/
     overflow: hidden; /* This ensures the image stays within the circle */
     display: flex;
     align-items: center;
@@ -34,8 +34,8 @@
   
   /* Updated logo styling to fill the circle */
   .logo {
-    width: 100%; /* Fill the container width */
-    height: 100%; /* Fill the container height */
+    width: 135%; /* Fill the container width */
+    height: 135%; /* Fill the container height */
     object-fit: cover; /* This ensures the image covers the area without distortion */
     border-radius: 50%; /* Keep it circular */
   }
@@ -139,20 +139,20 @@
   .service-icon svg {
     width: 60px;
     height: 60px;
-    color: #4CAF50;
+    color: #ffffff;
   }
   
   /* Service Title */
   .service-title {
     font-size: 1.4rem;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 15px;
   }
   
   /* Service Description */
   .service-description {
     font-size: 0.95rem;
-    color: #666;
+    color: #ffffff;
     line-height: 1.6;
   }
   /* More Services Button Container */

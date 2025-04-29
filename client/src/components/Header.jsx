@@ -16,7 +16,7 @@ const Header = () => {
       <nav>
         <div className="header-logo">
           <Link to="/">
-            <img src="/logo.jpg" alt="GreenView Logo" />
+            <img src="/logo.png" alt="GreenView Logo" />
           </Link>
         </div>
         
