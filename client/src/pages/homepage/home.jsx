@@ -1,6 +1,8 @@
 import React from 'react';
 import { Snowflake, Scissors, Clover } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './home.css';
+
 
 const featuredServices = [
   {
@@ -52,6 +54,11 @@ function HomePage() {
                 <p className="service-description">{service.description}</p>
               </div>
             ))}
+          </div>
+          <div className="more-services-container">
+            <Link to="/services" className="more-services-button">
+              More Services
+            </Link>
           </div>
         </div>
       </section>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './contact.css';
+import GoogleMaps from '../../components/GoogleMaps';
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -81,9 +83,14 @@ const Contact = () => {
             
             <div className="info-item">
               <strong>Hours:</strong>
-              <p>Monday - Friday: 9am - 5pm<br />Saturday: 10am - 2pm<br />Sunday: Closed</p>
+              <p>Monday - Friday: 7am - 7pm<br />Saturday: Closed<br />Sunday: 7am - 5pm</p>
+            </div>
+            <div className="info-item map-section">
+              <strong>Our location:</strong>
+              <GoogleMaps />
             </div>
           </div>
+
           
           <div className="contact-form">
             {showSuccess && (
@@ -174,15 +181,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      
-      <footer>
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-logo">Green View</div>
-            <p>&copy; 2025 Green View Landscape Architecture. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

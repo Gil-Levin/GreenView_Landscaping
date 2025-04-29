@@ -155,3 +155,24 @@
     color: #666;
     line-height: 1.6;
   }
+  /* More Services Button Container */
+  .more-services-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+  
+  /* More Services Button Styling */
+  .more-services-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+  }

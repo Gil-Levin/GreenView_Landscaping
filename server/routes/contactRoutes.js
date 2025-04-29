@@ -7,8 +7,8 @@ const router = express.Router();
 const transporter = nodemailer.createTransport({
   service: 'gmail', // אם את משתמשת ב-Gmail
   auth: {
-    user: 'calgarygreenview@gmail.com', // כתובת האימייל שלך
-    pass: 'greenView111!'    // הסיסמה שלך
+    user:'leash2480@gmail.com', // כתובת האימייל שלך
+    pass:'wglo sobz xngc xlzl'    // הסיסמה שלך
   }
 });
 
@@ -19,9 +19,9 @@ router.post('/send', (req, res) => {
 
   // הגדרת תוכן המייל
   const mailOptions = {
-    from: 'calgarygreenview@gmail.com',
-    to: 'michalivgy@gmail.com', // כתובת המייל של המנהל
-    subject: `New Contact Form Submission from ${name}`,
+    from:'leash2480@gmail.com',
+    to: 'greenviewcalgary@gmail.com', // כתובת המייל של המנהל
+    subject: `New Contact from website by ${name}`,
     text: `
       Name: ${name}
       Email: ${email}

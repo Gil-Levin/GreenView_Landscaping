@@ -151,50 +151,7 @@
     margin-right: auto;
   }
   
-  footer {
-    background-color: #2e6e41;
-    color: white;
-    padding: 50px 0 20px;
-    margin-top: auto;
-  }
   
-  .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 30px;
-  }
-  
-  .footer-logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  .footer-info p {
-    margin-bottom: 5px;
-    color: #e0e0e0;
-  }
-  
-  .footer-contact {
-    margin-top: 20px;
-  }
-  
-  
-  
-  .copyright {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 20px;
-    text-align: center;
-    color: #ffffff;
-  }
-  
-  .copyright p {
-    margin-bottom: 20px;
-    font-size: 17px;
-    color: #dfd9d9;
-    line-height: 1.8;
-  }
 
   @media (max-width: 768px) {
     header .container {

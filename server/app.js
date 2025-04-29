@@ -7,11 +7,10 @@ const contactRoutes = require('./routes/contactRoutes');  // מייבאים את
 
 
 const app = express();
-const port = 3000;
-
+const port = process.env.PORT || '3000';
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Replace with your client-side URL,
+    origin:'http://localhost:5173', // Replace with your client-side URL,
     methods: ['GET', 'POST'],
     allowedHeaders: 'Content-Type, Authorization'
   }));
