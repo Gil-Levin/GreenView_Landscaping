@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     const imageFiles = files.filter(file => /\.(jpg|jpeg|png|gif)$/i.test(file));
 
     // convert file name to image URL
-    const imageUrls = imageFiles.map(file => `http://localhost:3000/images/${file}`);
+    const imageUrls = imageFiles.map(file => `https://greenviewcalgary.ca/images/${file}`);
     res.json(imageUrls);
   });
 });
