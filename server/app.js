@@ -1,32 +1,31 @@
 const cors = require('cors'); // Add this line to enable CORS
-// דרישות מקבילות
 const express = require('express');
 const path = require('path');
-const imageRoutes = require('./routes/imageRoutes');  // אנחנו מייבאים את הקובץ imageRoutes.js
-const contactRoutes = require('./routes/contactRoutes');  // מייבאים את contactRoutes
+const imageRoutes = require('./routes/imageRoutes');  
+const contactRoutes = require('./routes/contactRoutes');
 
 
 const app = express();
 const port = process.env.PORT || '3000';
 
 app.use(cors({
-    origin:'http://localhost:5173', // Replace with your client-side URL,
+    origin:'http://localhost:5173',
     methods: ['GET', 'POST'],
     allowedHeaders: 'Content-Type, Authorization'
   }));
 
 app.use(express.json());
 
-// הגדרת תיקיית תמונות כסטטית (לגישה ישירה לתמונות)
+// define the images folder as static
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
-// כאן אנחנו מגדירים את ה-routes הקשורים לתמונות דרך הקובץ imageRoutes.js
+// define routes
 app.use('/api/images', imageRoutes);
-app.use('/api/contact', contactRoutes);  // הוספת ה-route לשליחת המייל
+app.use('/api/contact', contactRoutes);
 
 
 
-// התחלת השרת
+// start server
 app.listen(port, () => {
-  console.log(`השרת פועל ב-http://localhost:${port}`);
+  console.log(`The server is listening to-http://localhost:${port}`);
 });

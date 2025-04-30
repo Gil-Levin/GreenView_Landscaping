@@ -10,40 +10,14 @@ export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  /*useEffect(() => {
-    // In a real application, you would likely use an API endpoint to fetch images
-    const loadImages = async () => {
-      try {
-        // In a production app, you would handle this server-side
-        // and expose an API endpoint to get the images
-        const photosDir = path.resolve('../../../photos');
-        const files = fs.readdirSync(photosDir)
-          .filter(file => /\.(jpg|jpeg|png|gif)$/i.test(file))
-          .map(file => ({
-            src: `/${file}`,
-            alt: file.replace(/\.(jpg|jpeg|png|gif)$/i, '').replace(/-/g, ' '),
-            id: file
-          }));
-        
-        setImages(files);
-      } catch (error) {
-        console.error("Error loading images:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadImages();
-  }, []);*/
   useEffect(() => {
-    // שליחה לבקשה ל-API לקבלת כל התמונות
+    // get images from server
     axios.get('http://localhost:3000/api/images')
     .then(response => {
-      // response.data מכיל את הנתונים
       setImages(response.data);
     })
     .catch(error => {
-      console.error('שגיאה בהבאת התמונות:', error);
+      console.error('Error loading images:', error);
     })
     .finally(() => {
       setLoading(false);

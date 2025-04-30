@@ -3,23 +3,21 @@ const fs = require('fs');
 const path = require('path');
 const router = express.Router();
 
-// הגדרת נתיב לשליפת תמונות
+// define route to get the photos
 router.get('/', (req, res) => {
-  const imagesDir = path.join(__dirname, '../public/images'); // תיקיית התמונות
+  const imagesDir = path.join(__dirname, '../public/images'); // the images folder
   fs.readdir(imagesDir, (err, files) => {
     if (err) {
-      return res.status(500).send('שגיאה בקריאת הקבצים');
+      return res.status(500).send('error reading files');
     }
 
-    // פילטר כדי לקחת רק קבצים עם סיומות של תמונות (jpg, jpeg, png, וכו')
+    // Filter to only take files with image extensions (jpg, jpeg, png, etc)
     const imageFiles = files.filter(file => /\.(jpg|jpeg|png|gif)$/i.test(file));
 
-    // המרת שם הקובץ לכתובת URL
+    // convert file name to image URL
     const imageUrls = imageFiles.map(file => `http://localhost:3000/images/${file}`);
-
-    // מחזירים את הקישורים בתור JSON
     res.json(imageUrls);
   });
 });
 
-module.exports = router;  // מייצאים את ה-router
+module.exports = router;

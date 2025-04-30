@@ -34,14 +34,14 @@ const Contact = () => {
       return;
     }
     const req= {name: formData.name, email: formData.email, phone: formData.phone, service: formData.service, message: formData.message};
-    // שליחת הנתונים לשרת
+    // send data to server
   axios.post('http://localhost:3000/api/contact/send', req)
   .then(() => {
-    // הצגת הודעת הצלחה
+    // show success massage
     setShowSuccess(true);
     setShowError(false);
 
-    // איפוס טופס
+    // reset form
     setFormData({
       name: '',
       email: '',
@@ -51,7 +51,7 @@ const Contact = () => {
     });
   })
   .catch(() => {
-    // הצגת הודעת שגיאה
+    // show error massage
     setShowError(true);
     setShowSuccess(false);
   });
