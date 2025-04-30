@@ -12,7 +12,7 @@ export default function Gallery() {
 
   useEffect(() => {
     // get images from server
-    axios.get('http://localhost:3000/api/images')
+    axios.get('https://greenviewcalgary.ca/api/images')
     .then(response => {
       setImages(response.data);
     })

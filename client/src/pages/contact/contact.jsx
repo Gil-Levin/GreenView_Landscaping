@@ -35,7 +35,7 @@ const Contact = () => {
     }
     const req= {name: formData.name, email: formData.email, phone: formData.phone, service: formData.service, message: formData.message};
     // send data to server
-  axios.post('http://localhost:3000/api/contact/send', req)
+  axios.post('https://greenviewcalgary.ca/api/contact/send', req)
   .then(() => {
     // show success massage
     setShowSuccess(true);
