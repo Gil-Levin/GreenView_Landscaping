@@ -18,6 +18,7 @@ const services = [
     { name: 'Fire pit', icon: FlameKindling , image: '../../../photos/firePit.jpg'},
     { name: 'mulch', icon: LeafIcon , image: '../../../photos/mulch.jpg'},
     { name: 'Rocks', icon: SquareStack , image: '../../../photos/rock.jpg'},
+
     
 ];
 

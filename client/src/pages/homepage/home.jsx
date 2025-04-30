@@ -6,10 +6,10 @@ import './home.css';
 
 const featuredServices = [
   {
-    title: 'Snow Removal',
-    icon: Snowflake,
-    description: 'Professional snow removal services to keep your property safe and accessible during winter.',
-    image: '/photos/snow.jpg'
+    title: 'Sod Installation',
+    icon: Clover,
+    description: 'Transform your yard with fresh, high-quality sod installation services.',
+    image: '/photos/sodinstallation.jpg'
   },
   {
     title: 'Lawn and Garden Maintenance',
@@ -19,10 +19,10 @@ const featuredServices = [
 
   },
   {
-    title: 'Sod Installation',
-    icon: Clover,
-    description: 'Transform your yard with fresh, high-quality sod installation services.',
-    image: '/photos/sodinstallation.jpg'
+    title: 'Snow Removal',
+    icon: Snowflake,
+    description: 'Professional snow removal services to keep your property safe and accessible during winter.',
+    image: '/photos/snow.jpg'
   }
 ];
 
