@@ -12,7 +12,7 @@ const AboutUs = () => {
             <h2>How It All Started</h2>
             <div className="story-content">
               <div className="story-image">
-                <img src="../../../photos/aboutUs.jpg" alt="Greenview Landscaping beginnings" />
+                <img src="photos/aboutUs.jpg" alt="Greenview Landscaping beginnings" />
               </div>
               <div className="story-text">
                 <p>Greenview Landscaping was born out of a true love for nature and a simple vision - to turn every yard into a peaceful and beautiful retreat. It all started when I was working alone with just a shovel and a rake, helping neighbors and friends, driven by a passion for creating green spaces.</p>

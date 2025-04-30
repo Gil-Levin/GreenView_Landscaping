@@ -19,17 +19,21 @@ app.use(express.json());
 // define the images folder as static
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
+// Serve React (Vite) static files
+app.use(express.static(path.join(__dirname, '../client/dist')));
+
 // define routes
 app.use('/api/images', imageRoutes);
 app.use('/api/contact', contactRoutes);
 
-// Serve React app from build in prodaction
-app.use(express.static(path.join(__dirname, '../client/build')));
+
 
 // Handle client-side routing
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-});
+app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api')) return next();
+    res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+  });
+  
 
 // start server
 app.listen(port, () => {
