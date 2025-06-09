@@ -91,35 +91,11 @@
     color: #2E8B57;
     font-size: 36px;
     font-weight: 700;
-    font-family: 'Georgia', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
     padding-bottom: 10px;
-  }
-  
-  .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background-color: #4CAF50;
-  }
-  
-  /* Hover Indicator */
-  .service-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: #4CAF50;
-    transition: width 0.3s ease;
-    z-index: 2;
-  }
-  
+  }  
+
   .service-card:hover::after {
     width: 100%;
   }
@@ -133,3 +109,14 @@
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
+
+  @media (max-width: 480px) {
+    .services-section {
+      padding: 20px 10px;
+    }
+  
+    .section-title {
+      font-size: 28px;
+    }
+  }
+  

@@ -58,18 +58,6 @@ header {
     color: #2E8B57; /* Forest green when hovering */
   }
   
-  /* Animated underline effect */
-  .nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #4CAF50;
-    transition: width 0.3s ease;
-  }
-  
   .nav-links a:hover::after {
     width: 100%;
   }
@@ -83,35 +71,45 @@ header {
     width: 100%;
   }
   
-  /* Mobile navigation button - only visible on small screens */
+/* Mobile navigation button - only visible on small screens */ 
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  padding: 8px;
+  width: auto; 
+  height: auto;
+  line-height: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .mobile-nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #333;
-    cursor: pointer;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    max-width: 40px;
   }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .mobile-nav-toggle {
-      display: block;
-    }
-  
-    .nav-links {
-      position: fixed;
-      background: white;
-      flex-direction: column;
-      top: 70px;
-      right: 0;
-      width: 250px;
-      height: 100vh;
-      padding: 2rem;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in-out;
-      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    }
+ 
+  .nav-links {
+    position: fixed;
+    background: white;
+    flex-direction: column;
+    top: 70px;
+    left: 0;
+    width: 180px;
+    height: 66vh;
+    padding: 1rem 1rem 2rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
   
     .nav-links.open {
       transform: translateX(0);
@@ -119,7 +117,7 @@ header {
     
     .nav-links li {
       width: 100%;
-      text-align: right;
+      text-align: left;
       margin: 1rem 0;
     }
   }

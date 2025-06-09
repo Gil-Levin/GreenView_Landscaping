@@ -23,7 +23,6 @@
     padding: 20px;
   }
   
-  
   .hero {
     height: 400px;
     background-image: url('/api/placeholder/1920/400');
@@ -57,21 +56,13 @@
   
   h2 {
     font-size: 32px;
+    font-family: inherit;
     color: #2e6e41;
     margin-bottom: 30px;
     position: relative;
     display: inline-block;
   }
-  
-  h2:after {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 3px;
-    background-color: #4caf50;
-    bottom: -10px;
-    left: 0;
-  }
+
   
   .story-section {
     margin-bottom: 60px;
@@ -113,6 +104,7 @@
     font-size: 17px;
     color: #333;
     line-height: 1.8;
+    font-family: inherit;
   }
   
   .cta-section {
@@ -129,6 +121,7 @@
     font-size: 17px;
     color: #282828;
     line-height: 1.8;
+    font-family: inherit;
   }
   
   .cta-section h2 {
@@ -151,8 +144,6 @@
     margin-right: auto;
   }
   
-  
-
   @media (max-width: 768px) {
     header .container {
       flex-direction: column;
@@ -170,6 +161,8 @@
     
     .hero h1 {
       font-size: 36px;
+      color: #2e6e41;
+      font-family: inherit;
     }
     
     .values-section {
@@ -179,4 +172,22 @@
     .cta-section {
       padding: 40px 20px;
     }
+
+    .story-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .story-text, .story-image {
+      min-width: unset;
+      width: 100%;
+    }
   }
+  
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 28px;
+      padding: 0 15px;
+    }
+  }
+  

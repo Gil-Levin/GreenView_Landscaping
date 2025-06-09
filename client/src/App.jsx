@@ -9,7 +9,7 @@ import AllServices from './pages/allServices/allServices';  // Importing the All
 import Gallery from './pages/gallery/gallery';  // Importing the Gallery component
 import Contact from './pages/contact/contact';  // Importing the contact component
 import Footer from "./components/Footer";
-
+import Blog from "./pages/blog/blog"
 
 
 function App() {
@@ -20,11 +20,10 @@ function App() {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<AllServices />} />
+          <Route path="/blog" element={<Blog/>}/>
           <Route path="/contact" element={<Contact />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/gallery" element={<Gallery />} />
-
-
       </Routes>
       </main>
       <Footer />  {/* Adding the Footer component here */}

@@ -32,7 +32,7 @@ function HomePage() {
       {/* Hero section with background and logo */}
       <section className="hero-section">
         <div className="logo-container">
-          <img src="/logo.png" alt="GreenView Landscaping" className="logo" />
+          <img src="/logo.png" alt="GreenView Landscaping" className="logo"style={{ width: '200px', height: 'auto' }} />
         </div>
       </section>
 
@@ -40,7 +40,24 @@ function HomePage() {
       <section className="welcome-section">
         <div className="container">
           <h1 className="welcome-title">Welcome to Green View</h1>
-          <p className="welcome-text">Transform your outdoor space</p>
+          <p className="welcome-tagline">Proudly serving happy lawns all across Calgary 🌱</p>
+          {/*<p className="welcome-text">Transform your outdoor space</p>*/}
+        </div>
+
+      {/*Google review section*/}
+      </section>
+      <section className="google-review-section">
+        <div className="container">
+          <h2 className="review-title">What our customers say</h2>
+          <p className="review-description">We’d love your feedback!</p>
+          <a
+            className="google-review-button"
+            href="https://www.google.com/maps/place/Green+view+Calgary/@51.1033553,-114.0672166,15z/data=!4m8!3m7!1s0x49fd1d95e9aaacd7:0x1d7172f3c1d5cdf0!8m2!3d51.0276233!4d-114.087835!9m1!1b1!16s%2Fg%2F11w9ffzjyz?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Leave us a Google Review
+          </a>
         </div>
       </section>
 
