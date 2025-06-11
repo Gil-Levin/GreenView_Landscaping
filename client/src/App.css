@@ -1,8 +1,8 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  text-align: center;
-}
+  width: 100%;
+  margin: 0;
+  text-align: left;
+} /*Full page and not just the center*/
 
 .logo {
   height: 6em;

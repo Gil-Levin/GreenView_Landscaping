@@ -40,11 +40,14 @@ function HomePage() {
       <section className="welcome-section">
         <div className="container">
           <h1 className="welcome-title">Welcome to Green View</h1>
-          <p className="welcome-tagline">Proudly serving happy lawns all across Calgary 🌱</p>
+          <p className="welcome-tagline">Elevating Outdoor Living Across Calgary 🌿
+                                          Greenview Calgary is proud to serve communities throughout the city with exceptional lawn care services. Our mission is simple: to create healthy, green, and well-maintained lawns that reflect the pride of Calgary homeowners. With attention to detail, customer-first service, and proven expertise, we help you fall in love with your lawn — season after season.       
+                                          We also take care in what we use:
+                                          All of our products are made in Canada, ensuring quality you can trust and supporting local sustainability with every lawn we touch.</p>
           {/*<p className="welcome-text">Transform your outdoor space</p>*/}
         </div>
 
-      {/*Google review section*/}
+      {/* Google review section
       </section>
       <section className="google-review-section">
         <div className="container">
@@ -58,7 +61,7 @@ function HomePage() {
           >
             Leave us a Google Review
           </a>
-        </div>
+        </div>*/}
       </section>
 
       {/* Featured services section */}
@@ -79,7 +82,7 @@ function HomePage() {
             ))}
           </div>
           <div className="more-services-container">
-            <Link to="/services" className="more-services-button">
+            <Link to="/services" className="more-services-button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               More Services
             </Link>
           </div>

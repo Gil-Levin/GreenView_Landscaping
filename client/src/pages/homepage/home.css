@@ -184,6 +184,7 @@
     .logo {
       width: 130%;
       height: 130%;
+      transform: scale(0.69);
     }
   
     .welcome-title {

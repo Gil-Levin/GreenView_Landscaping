@@ -31,9 +31,16 @@ const Header = () => {
     <header>
       <nav ref={navRef}>
         <div className="header-logo">
-          <Link to="/">
-            <img src="/logo.png" alt="GreenView Logo" />
-          </Link>
+        <Link 
+          to="/" 
+          className="header-logo" 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
+          <img src="/logo.png" alt="GreenView Logo" />
+        </Link>
+          <div className="header-phone">
+            <a href="tel:14038997585">(403)-899-7585</a>
+          </div>
         </div>
 
         <button className="mobile-nav-toggle" onClick={toggleMenu}>
@@ -41,12 +48,12 @@ const Header = () => {
         </button>
 
         <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-          <li><NavLink to="/" end>Home</NavLink></li>
-          <li><NavLink to="/services">Services</NavLink></li>
-          <li><NavLink to="/gallery">Gallery</NavLink></li>
-          <li><NavLink to="/blog">Blog</NavLink></li>
-          <li><NavLink to="/aboutUs">About Us</NavLink></li>
-          <li><NavLink to="/contact" className="cta-button">Contact</NavLink></li>
+          <li><NavLink to="/" end onClick={() => setIsMenuOpen(false)}>Home</NavLink></li>
+          <li><NavLink to="/services" onClick={() => setIsMenuOpen(false)}>Services</NavLink></li>
+          <li><NavLink to="/gallery" onClick={() => setIsMenuOpen(false)}>Gallery</NavLink></li>
+          <li><NavLink to="/blog" onClick={() => setIsMenuOpen(false)}>Blog</NavLink></li>
+          <li><NavLink to="/aboutUs" onClick={() => setIsMenuOpen(false)}>About Us</NavLink></li>
+          <li><NavLink to="/contact" className="cta-button" onClick={() => setIsMenuOpen(false)}>Contact</NavLink></li>
         </ul>
       </nav>
     </header>

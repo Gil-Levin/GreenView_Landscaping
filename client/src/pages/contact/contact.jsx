@@ -82,8 +82,8 @@ const Contact = () => {
             </div>
             
             <div className="info-item">
-              <strong>Hours:</strong>
-              <p>Monday - Friday: 7am - 7pm<br />Saturday: Closed<br />Sunday: 7am - 5pm</p>
+              <strong>Hours of operation:</strong>
+              <p>Monday - Friday: 8 a.m - 5 p.m<br />Saturday: Closed<br />Sunday: 8 a.m - 5 p.m</p>
             </div>
             <div className="info-item map-section">
               <strong>Our location:</strong>

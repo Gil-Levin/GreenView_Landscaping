@@ -10,7 +10,7 @@ import Gallery from './pages/gallery/gallery';  // Importing the Gallery compone
 import Contact from './pages/contact/contact';  // Importing the contact component
 import Footer from "./components/Footer";
 import Blog from "./pages/blog/blog"
-
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
       </Routes>
       </main>
       <Footer />  {/* Adding the Footer component here */}
+      <WhatsAppButton />
     </Router>
   );
 }

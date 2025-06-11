@@ -27,7 +27,7 @@ function AllServices() {
     <div>
       {/* All Services */}
       <section className="services-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="services-wrapper">
           <h2 className="section-title">Our Services</h2>
           <div className="services-grid">
           {services.map((service, index) => (
@@ -45,7 +45,12 @@ function AllServices() {
               </div>
             ))}
             {/* Gallery Button */}
-            <Link to="/gallery" className="service-card gallery-card" style={{ backgroundImage: `url('../../../photos/logo.jpg')` }}>
+            <Link 
+              to="/gallery" 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="service-card gallery-card" 
+              style={{ backgroundImage: `url('../../../photos/logo.jpg')` }}
+            >
               <div className="service-overlay">
                 <div className="service-content">
                   <div className="service-name-overlay">View Our Work</div>
