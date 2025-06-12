@@ -3,7 +3,6 @@ import axios from 'axios';
 import './contact.css';
 import GoogleMaps from '../../components/GoogleMaps';
 
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
