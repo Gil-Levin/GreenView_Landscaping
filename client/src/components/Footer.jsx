@@ -17,6 +17,12 @@ const Footer = () => {
             <div className="footer-logo">Green View</div>
             <div className="footer-phone">
               <a href="tel:14038997585">(403)-899-7585</a>
+              <div className="footer-email">
+                <a href="mailto:Greenviewcalgary@gmail.com">Greenviewcalgary@gmail.com</a>
+              </div>
+              <div className="footer-sentance">
+                <p>Proudly serving the Calgary community with quality landscaping solutions.</p>
+              </div>
             </div>
           </div>
 

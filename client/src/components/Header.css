@@ -16,13 +16,14 @@ header {
     display: flex;
     justify-content: flex-start;
   }
-  
+
   .header-logo {
     display: flex;
     align-items: center;
     margin-left: auto;
     order: 2;
-    gap: 60px;
+    gap: 69px;
+    flex-direction: row;
   }
   
   .header-logo img {
@@ -53,6 +54,12 @@ header {
     padding: 0.5rem 0;
     position: relative;
     letter-spacing: 0.5px;
+  }
+
+  .nav-links a.active {
+    color: #2E8B57;
+    font-weight: 700;
+    border-bottom: 2px solid #2E8B57;
   }
   
   .nav-links a:hover {
@@ -97,10 +104,17 @@ header {
     height: 100px;
   }
 
-  .header-logo {
-    gap: 10px !important;
-  }
+    .header-logo {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+    }
  
+  .header-logo img {
+    height: 70px;
+  }
+
   .nav-links {
     position: fixed;
     background: white;
@@ -128,9 +142,22 @@ header {
       margin: 1rem 0;
     }
 
-    /* .header-phone {
-      margin-left: 5px;
-    } */
+    .header-phone {
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      line-height: 1.2;
+    }
+
+    .call-label {
+      font-size: 14px;
+      font-weight: 500;
+      color: #2E8B57;
+      margin-bottom: 2px;
+      text-align: left;
+    }
   }
   
   /* Green accent for special items or buttons within header */
@@ -151,12 +178,15 @@ header {
   .cta-button::after {
     display: none;
   }
-  
+
   .header-phone {
     font-size: 25px;
     margin-top: 4px;
     font-weight: 500;
     color: #2E8B57;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   
   .header-phone a {
@@ -167,4 +197,11 @@ header {
   .header-phone a:hover {
     text-decoration: underline;
   }
-  
+
+  .call-label {
+    font-size: 23px;
+    font-weight: 500;
+    color: #2E8B57;
+    margin-bottom: 2px;
+    text-align: left;
+  }

@@ -40,7 +40,7 @@ function HomePage() {
       <section className="welcome-section">
         <div className="container">
           <h1 className="welcome-title">Welcome to Green View</h1>
-          <p className="welcome-tagline">Elevating Outdoor Living Across Calgary 🌿
+          <p className="welcome-tagline">Elevating Outdoor Living Across Calgary
                                           Greenview Calgary is proud to serve communities throughout the city with exceptional lawn care services. Our mission is simple: to create healthy, green, and well-maintained lawns that reflect the pride of Calgary homeowners. With attention to detail, customer-first service, and proven expertise, we help you fall in love with your lawn — season after season.       
                                           We also take care in what we use:
                                           All of our products are made in Canada, ensuring quality you can trust and supporting local sustainability with every lawn we touch.</p>
