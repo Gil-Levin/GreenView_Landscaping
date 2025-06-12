@@ -130,6 +130,7 @@ header {
     z-index: 99;
     align-items: flex-start;
     justify-content: flex-start;
+    overflow-y: auto;
   }
   
     .nav-links.open {
@@ -157,6 +158,13 @@ header {
       color: #2E8B57;
       margin-bottom: 2px;
       text-align: left;
+    }
+
+    .cta-button {
+      width: 100%;
+      text-align: center;
+      padding: 0.6rem 0.8rem !important;
+      box-sizing: border-box;
     }
   }
   
