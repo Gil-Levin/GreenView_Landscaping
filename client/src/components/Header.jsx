@@ -15,7 +15,9 @@ const Header = () => {
   // Scroll to top + close menu
   const handleNavClick = () => {
     setIsMenuOpen(false);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
   };
 
   useEffect(() => {
@@ -37,10 +39,6 @@ const Header = () => {
     <header>
       <nav ref={navRef}>
         <div className="header-logo">
-          <div className="header-phone">
-            <div className="call-label">Call us now!</div>
-            <a href="tel:14038997585">(403)-899-7585</a>
-          </div>
           <Link
             to="/"
             className="header-logo"
@@ -48,19 +46,31 @@ const Header = () => {
           >
             <img src="/logo.png" alt="GreenView Logo" />
           </Link>
+          <div className="header-phone">
+            <span className="call-label">
+              Give us a call <a href="tel:14038997585">(403)-899-7585</a>
+            </span>
+          </div>
         </div>
 
         <button className="mobile-nav-toggle" onClick={toggleMenu}>
           {isMenuOpen ? <X /> : <Menu />}
         </button>
 
+        {isMenuOpen && (
+          <div 
+            className="mobile-menu-backdrop" 
+            onClick={() => setIsMenuOpen(false)}
+          />
+        )}
+        
         <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
           <li><NavLink to="/" end onClick={handleNavClick}>Home</NavLink></li>
           <li><NavLink to="/services" onClick={handleNavClick}>Services</NavLink></li>
           <li><NavLink to="/gallery" onClick={handleNavClick}>Gallery</NavLink></li>
           <li><NavLink to="/blog" onClick={handleNavClick}>Blog</NavLink></li>
           <li><NavLink to="/aboutUs" onClick={handleNavClick}>About Us</NavLink></li>
-          <li><NavLink to="/contact" className="cta-button" onClick={handleNavClick}>Contact</NavLink></li>
+          <li><NavLink to="/contact" onClick={handleNavClick}>Contact</NavLink></li>
         </ul>
       </nav>
     </header>

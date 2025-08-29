@@ -16,7 +16,7 @@ const transporter = nodemailer.createTransport({
 
 // route to send mail
 router.post('/send', (req, res) => {
-    console.log(req.body);
+
   const { name, email, phone, service, message } = req.body;
 
   // define mail content
@@ -36,8 +36,7 @@ router.post('/send', (req, res) => {
   // send mail
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-        console.log(error);
-        console.log(info);
+
       return res.status(500).send('Error sending email');
     }
     res.status(200).send('Email sent successfully');

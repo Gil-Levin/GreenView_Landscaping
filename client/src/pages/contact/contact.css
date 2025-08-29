@@ -42,6 +42,33 @@
     background-color: #f0f7f0;
     padding: 30px;
     border-radius: 8px;
+    border: none !important;
+    border-left: none !important;
+    outline: none !important;
+    box-shadow: none;
+  }
+  
+  .contact-info * {
+    border-left: none !important;
+    border: none !important;
+  }
+  
+  .info-item {
+    margin-bottom: 25px;
+    border: none !important;
+    border-left: none !important;
+  }
+  
+  .info-item::before,
+  .info-item::after {
+    display: none !important;
+    content: none !important;
+  }
+  
+  .map-section {
+    margin-top: 3rem;
+    border: none !important;
+    border-left: none !important;
   }
   
   .contact-form {
@@ -59,6 +86,14 @@
     color: #2e6e41;
     position: relative;
     padding-bottom: 10px;
+    border: none;
+    outline: none;
+  }
+  
+  h2::before,
+  h2::after {
+    display: none;
+    content: none;
   }
   
   p {

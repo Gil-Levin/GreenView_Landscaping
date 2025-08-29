@@ -10,9 +10,21 @@ import Gallery from './pages/gallery/gallery';  // Importing the Gallery compone
 import Contact from './pages/contact/contact';  // Importing the contact component
 import Footer from "./components/Footer";
 import Blog from "./pages/blog/blog"
+import Privacy from './pages/privacy/privacy';
 import WhatsAppButton from './components/WhatsAppButton';
+import CookieNotice from './components/CookieNotice';
+import ConsentForm from './components/ConsentForm';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [showConsentForm, setShowConsentForm] = useState(false);
+
+  useEffect(() => {
+    window.showCookieSettings = () => {
+      setShowConsentForm(true);
+    };
+  }, []);
+
   return (
     <Router>
       <Header />  {/* Adding the Header component here */}
@@ -24,10 +36,16 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/privacy" element={<Privacy />} />
       </Routes>
       </main>
       <Footer />  {/* Adding the Footer component here */}
       <WhatsAppButton />
+      <CookieNotice />
+      <ConsentForm 
+        isOpen={showConsentForm} 
+        onClose={() => setShowConsentForm(false)} 
+      />
     </Router>
   );
 }

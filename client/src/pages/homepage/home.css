@@ -6,11 +6,15 @@
   
   /* Hero Section with Background Image */
   .hero-section {
-    height: 33vh; /* Top third of the viewport */
-    background-image: url('../../../public/backroubdHome.jpg'); /* You'll need to add this image */
+    height: 60vh; /* Increased from 33vh to 60vh for bigger background image */
+    background-image: url('../../../public/backroubdHome.png'); /* You'll need to add this image */
     background-size: cover;
     background-position: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero-section::after {
@@ -18,6 +22,75 @@
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.3);
+  }
+
+  /* Hero Content Styling */
+  .hero-content {
+    text-align: center;
+    z-index: 5;
+    position: relative;
+    color: white;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Georgia', serif;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+    color: white;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-button {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+
+  .hero-button.primary {
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+  }
+
+  .hero-button.primary:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
+  }
+
+  .hero-button.secondary {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+  }
+
+  .hero-button.secondary:hover {
+    background-color: white;
+    color: #333;
+    transform: translateY(-2px);
   }
   
   /* Logo Positioning */
@@ -185,6 +258,25 @@
       width: 130%;
       height: 130%;
       transform: scale(0.69);
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .hero-button {
+      padding: 12px 25px;
+      font-size: 1rem;
     }
   
     .welcome-title {

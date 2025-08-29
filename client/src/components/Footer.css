@@ -119,6 +119,24 @@ footer {
   text-decoration: underline;
 }
 
+.footer-cookie-link {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  padding: 0;
+}
+
+.footer-cookie-link:hover {
+  color: #a8e6a1;
+  text-decoration: underline;
+}
+
 .footer-sentance p{
   color: white;
   font-size: 0.95rem;

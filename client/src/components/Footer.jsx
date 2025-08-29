@@ -33,6 +33,8 @@ const Footer = () => {
             <li><Link to="/gallery" onClick={scrollToTop}>Gallery</Link></li>
             <li><Link to="/contact" onClick={scrollToTop}>Contact</Link></li>
             <li><Link to="/blog" onClick={scrollToTop}>Blog</Link></li>
+            <li><Link to="/privacy" onClick={scrollToTop}>Privacy</Link></li>
+            <li><button className="footer-cookie-link" onClick={() => window.showCookieSettings()}>Cookie Settings</button></li>
           </ul>
 
           <div className="footer-social">

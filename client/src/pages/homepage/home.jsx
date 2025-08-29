@@ -1,6 +1,7 @@
 import React from 'react';
 import { Snowflake, Scissors, Clover } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import WallOfLove from '../../components/WallOfLove';
 import './home.css';
 
 
@@ -31,6 +32,18 @@ function HomePage() {
     <div className="home-page">
       {/* Hero section with background and logo */}
       <section className="hero-section">
+        <div className="hero-content">
+          <h1 className="hero-title">Transform Your Outdoor Space</h1>
+          <p className="hero-subtitle">Professional landscaping services in Calgary</p>
+          <div className="hero-buttons">
+            <Link to="/contact" className="hero-button primary">
+              Get Free Estimate
+            </Link>
+            <a href="tel:+14035551234" className="hero-button secondary">
+              Call Us Now
+            </a>
+          </div>
+        </div>
         <div className="logo-container">
           <img src="/logo.png" alt="GreenView Landscaping" className="logo"style={{ width: '200px', height: 'auto' }} />
         </div>
@@ -41,7 +54,7 @@ function HomePage() {
         <div className="container">
           <h1 className="welcome-title">Welcome to Green View</h1>
           <p className="welcome-tagline">Elevating Outdoor Living Across Calgary
-                                          Greenview Calgary is proud to serve communities throughout the city with exceptional lawn care services. Our mission is simple: to create healthy, green, and well-maintained lawns that reflect the pride of Calgary homeowners. With attention to detail, customer-first service, and proven expertise, we help you fall in love with your lawn — season after season.       
+                                          Green view is proud to serve communities throughout the city with exceptional lawn care services. Our mission is simple: to create healthy, green, and well-maintained lawns that reflect the pride of Calgary homeowners. With attention to detail, customer-first service, and proven expertise, we help you fall in love with your lawn — season after season.       
                                           We also take care in what we use:
                                           All of our products are made in Canada, ensuring quality you can trust and supporting local sustainability with every lawn we touch.</p>
           {/*<p className="welcome-text">Transform your outdoor space</p>*/}
@@ -88,6 +101,9 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Wall of Love - Customer Reviews */}
+      <WallOfLove />
     </div>
   );
 }

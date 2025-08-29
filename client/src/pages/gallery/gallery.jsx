@@ -17,7 +17,7 @@ export default function Gallery() {
       setImages(response.data);
     })
     .catch(error => {
-      console.error('Error loading images:', error);
+
     })
     .finally(() => {
       setLoading(false);
