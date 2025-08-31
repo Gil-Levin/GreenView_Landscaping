@@ -183,7 +183,10 @@
   }
   
   .lightbox-image {
+    max-width: 100%;
     max-height: 90vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
   }
   
@@ -239,6 +242,21 @@
   
     /* Mobile responsive adjustments for lightbox close button */
   @media (max-width: 768px) {
+    .lightbox {
+      padding: 0.5rem;
+      padding-top: 4rem;
+    }
+    
+    .lightbox-content {
+      max-width: 95vw;
+      max-height: 95vh;
+    }
+    
+    .lightbox-image {
+      max-width: 95vw;
+      max-height: 85vh;
+    }
+    
     .lightbox-close {
       top: 0.75rem;
       right: 0.75rem;
@@ -252,6 +270,21 @@
   }
 
   @media (max-width: 480px) {
+    .lightbox {
+      padding: 0.25rem;
+      padding-top: 3rem;
+    }
+    
+    .lightbox-content {
+      max-width: 98vw;
+      max-height: 98vh;
+    }
+    
+    .lightbox-image {
+      max-width: 98vw;
+      max-height: 80vh;
+    }
+    
     .lightbox-close {
       top: 0.5rem;
       right: 0.5rem;
