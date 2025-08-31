@@ -39,7 +39,7 @@ function HomePage() {
             <Link to="/contact" className="hero-button primary">
               Get Free Estimate
             </Link>
-            <a href="tel:+14035551234" className="hero-button secondary">
+            <a href="tel:14038997585" className="hero-button secondary">
               Call Us Now
             </a>
           </div>
@@ -59,22 +59,6 @@ function HomePage() {
                                           All of our products are made in Canada, ensuring quality you can trust and supporting local sustainability with every lawn we touch.</p>
           {/*<p className="welcome-text">Transform your outdoor space</p>*/}
         </div>
-
-      {/* Google review section
-      </section>
-      <section className="google-review-section">
-        <div className="container">
-          <h2 className="review-title">What our customers say</h2>
-          <p className="review-description">We’d love your feedback!</p>
-          <a
-            className="google-review-button"
-            href="https://www.google.com/maps/place/Green+view+Calgary/@51.1033553,-114.0672166,15z/data=!4m8!3m7!1s0x49fd1d95e9aaacd7:0x1d7172f3c1d5cdf0!8m2!3d51.0276233!4d-114.087835!9m1!1b1!16s%2Fg%2F11w9ffzjyz?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Leave us a Google Review
-          </a>
-        </div>*/}
       </section>
 
       {/* Featured services section */}
