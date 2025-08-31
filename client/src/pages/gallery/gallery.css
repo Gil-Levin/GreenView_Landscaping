@@ -99,6 +99,16 @@
     font-weight: 500;
     font-size: 0.875rem;
   }
+
+  .image-title {
+    color: white;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
   
   /* Loading State */
   .gallery-loading {
@@ -155,11 +165,12 @@
     position: fixed;
     inset: 0;
     background-color: rgba(0, 49, 25, 0.9);
-    z-index: 50;
+    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    padding-top: 5rem;
   }
   
   .lightbox-content {
@@ -168,6 +179,7 @@
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    position: relative;
   }
   
   .lightbox-image {
@@ -186,64 +198,69 @@
     font-weight: 500;
   }
   
-  .lightbox-close {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
+    .lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     border: 2px solid white;
     border-radius: 50%;
-    padding: 0.75rem;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-    transition: all 0.2s ease;
-    z-index: 1001;
-    width: 3rem;
-    height: 3rem;
+    transition: all 0.3s ease;
+    z-index: 10000;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
   }
-  
+
   .lightbox-close:hover {
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 0, 0, 0.9);
     transform: scale(1.1);
+    border-color: #ff4444;
+  }
+
+  .lightbox-close svg {
+    width: 16px;
+    height: 16px;
+    color: white;
   }
   
-  .close-icon {
-    height: 1.5rem;
-    width: 1.5rem;
-    stroke-width: 3;
-  }
-  
-  /* Mobile responsive adjustments for lightbox close button */
+    /* Mobile responsive adjustments for lightbox close button */
   @media (max-width: 768px) {
-    .lightbox-close {
-      top: 1rem;
-      right: 1rem;
-      width: 2.5rem;
-      height: 2.5rem;
-      padding: 0.5rem;
-    }
-    
-    .close-icon {
-      height: 1.25rem;
-      width: 1.25rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
     .lightbox-close {
       top: 0.75rem;
       right: 0.75rem;
-      width: 2.25rem;
-      height: 2.25rem;
-      padding: 0.4rem;
+      width: 36px;
+      height: 36px;
     }
     
-    .close-icon {
-      height: 1rem;
-      width: 1rem;
+    .close-text {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .lightbox-close {
+      top: 0.5rem;
+      right: 0.5rem;
+      width: 32px;
+      height: 32px;
+    }
+    
+    .close-text {
+      font-size: 1.1rem;
     }
   }
   
